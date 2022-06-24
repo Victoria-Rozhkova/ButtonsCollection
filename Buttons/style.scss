@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  color: #fff;
+}
+
+button {
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navigate {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  align-items: center;
+  font-family: cursive;
+}
+
+.navigate:hover {
+  color: red
+}
