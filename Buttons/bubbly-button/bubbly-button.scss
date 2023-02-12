@@ -19,6 +19,7 @@ $baby-blue: #f8faff;
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  user-select: none;
 
   &:focus {
     outline: 0;
@@ -80,6 +81,7 @@ $baby-blue: #f8faff;
       display: block;
       animation: topBubbles ease-in-out 0.75s forwards;
     }
+
     &:after {
       display: block;
       animation: bottomBubbles ease-in-out 0.75s forwards;
@@ -92,10 +94,12 @@ $baby-blue: #f8faff;
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
       40% 90%, 55% 90%, 70% 90%;
   }
+
   50% {
     background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
       50% 50%, 65% 20%, 90% 30%;
   }
+
   100% {
     background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
       50% 40%, 65% 10%, 90% 20%;
@@ -108,13 +112,36 @@ $baby-blue: #f8faff;
     background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
       70% -10%, 70% 0%;
   }
+
   50% {
     background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
       105% 0%;
   }
+
   100% {
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+}
+
+.bubbly-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.bubbly-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.bubbly-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.bubbly-button--full {
+  width: 100%;
+  font-size: 18px;
+  padding: 13px 28px;
 }
