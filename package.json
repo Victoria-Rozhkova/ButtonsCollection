@@ -30,10 +30,8 @@
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/html": "^6.5.16",
     "@storybook/manager-webpack4": "^6.5.16",
-    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
-    "chromatic": "^6.17.0",
     "gh-pages": "^5.0.0"
   }
 }
