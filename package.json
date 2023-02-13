@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Victoria-Rozhkova/CSSCollection/issues"
   },
-  "homepage": "https://github.com/Victoria-Rozhkova/CSSCollection#readme",
+  "homepage": "https://Victoria-Rozhkova.github.io/CSSCollection",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@storybook/addon-actions": "^6.5.16",
@@ -28,9 +29,9 @@
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/html": "^6.5.16",
     "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.17.0"
-  },
-  "dependencies": {}
+  }
 }
