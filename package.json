@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Victoria-Rozhkova.github.io/CSSCollection",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/Victoria-Rozhkova/CSSCollection/issues"
   },
-  "homepage": "https://Victoria-Rozhkova.github.io/CSSCollection",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@storybook/addon-actions": "^6.5.16",
@@ -32,6 +33,7 @@
     "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
-    "chromatic": "^6.17.0"
+    "chromatic": "^6.17.0",
+    "gh-pages": "^5.0.0"
   }
 }
