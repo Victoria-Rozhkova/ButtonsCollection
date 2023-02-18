@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+.threeD-button {
+  --font-size: 1.5rem;
+  --perspective: calc(var(--font-size) * 10);
+  --bg: hsl(210, 100%, 56%);
+  --bg-accent: hsl(210, 100%, 46%);
+  --duration: 800ms;
+  --ease: cubic-bezier(0.3, 1.4, 0.65, 1);
+  cursor: pointer;
+  position: relative;
+  perspective: var(--perspective);
+  font-family: inherit;
+  font-size: var(--font-size);
+  font-weight: bold;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.threeD-button:focus {
+  z-index: 1;
+}
+
+.threeD-button:focus-visible {
+  --size: 3px;
+  outline: var(--size) dashed var(--bg);
+  outline-offset: calc(var(--size) * 2);
+}
+
+.threeD-button .threeD-button-wrapper {
+  position: relative;
+  display: grid;
+  transform: translateZ(calc(var(--font-size) * -1)) scale(1.001) rotateX(0) rotateY(0) rotateZ(0);
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.threeD-button .threeD-button-wrapper {
+  transition: transform var(--duration) var(--ease);
+}
+
+.threeD-button .threeD-button-wrapper > * {
+  grid-area: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--duration) var(--ease);
+}
+
+.threeD-button .threeD-button-front,
+.threeD-button .threeD-button-back {
+  padding: 1rem 2rem;
+  background-color: var(--bg);
+}
+
+.threeD-button .threeD-button-wrapper :not(.threeD-button-front):not(.threeD-button-back) {
+  background-color: var(--bg-accent);
+}
+
+.threeD-button .threeD-button-top,
+.threeD-button .threeD-button-bottom {
+  width: 100%;
+  height: var(--font-size);
+}
+
+.threeD-button .threeD-button-left,
+.threeD-button .threeD-button-right {
+  width: var(--font-size);
+  height: 100%;
+}
+
+.threeD-button .threeD-button-front {
+  transform: translateZ(var(--font-size));
+}
+
+.threeD-button .threeD-button-back {
+  transform: scaleX(-1);
+}
+
+.threeD-button .threeD-button-top {
+  transform-origin: top center;
+  transform: rotateX(90deg);
+}
+
+.threeD-button .threeD-button-bottom {
+  align-self: end;
+  transform-origin: bottom center;
+  transform: rotateX(-90deg);
+}
+
+.threeD-button .threeD-button-right {
+  justify-self: end;
+  transform-origin: center right;
+  transform: rotateY(90deg);
+}
+
+.threeD-button .threeD-button-left {
+  justify-self: start;
+  transform-origin: center left;
+  transform: rotateY(-90deg);
+}
+
+.threeD-button.clicked {
+  --bg: hsl(147, 50%, 47%);
+  --bg-accent: hsl(147, 50%, 37%);
+}
+
+.threeD-button.one.clicked .threeD-button-wrapper {
+  transform: translateZ(0) scale(1.001) rotateY(0.5turn);
+}
+
+.threeD-button.two.clicked .threeD-button-wrapper {
+  transform: translateZ(0) scale(1.001) rotateX(-0.5turn) rotateY(0) rotateZ(-0.5turn);
+}
+
+.threeD-button.three.clicked .threeD-button-back {
+  transform: scaleX(-1) rotate(0.5turn);
+}
+
+.threeD-button.three.clicked .threeD-button-wrapper {
+  transform: translateZ(0) scale(1.001) rotateX(1.5turn) rotateY(0) rotateZ(0);
+}
+
+.threeD-button.four.clicked {
+  --duration: 1400ms;
+}
+
+.threeD-button.four.clicked .threeD-button-wrapper {
+  transform: translateZ(0) scale(1.001) rotateX(0.5turn) rotateY(0) rotateZ(1.5turn);
+}/*# sourceMappingURL=3d-button.css.map */
